@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_modular: ^5.0.3
   get: ^4.6.5
+  http: ^0.13.5
+  loading_animation_widget: ^1.2.0+3
 
 dev_dependencies:
   flutter_test:

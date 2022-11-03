@@ -11,6 +11,7 @@ import 'package:star_wars/src/modules/home_module/infra/datasource/get_planet_in
 import 'package:star_wars/src/modules/home_module/infra/datasource/get_starship_datasource.dart';
 import 'package:star_wars/src/modules/home_module/infra/repositories/home_repository_impl.dart';
 import 'package:star_wars/src/modules/home_module/presentation/pages/details/details_controller.dart';
+import 'package:star_wars/src/modules/home_module/presentation/pages/film_details/film_details_controller.dart';
 import 'package:star_wars/src/modules/home_module/presentation/pages/home/home_controller.dart';
 import 'package:star_wars/src/modules/home_module/presentation/pages/home/home_page.dart';
 
@@ -24,6 +25,7 @@ class HomeModule extends Module {
         ..._detailsBinds(),
         Bind.factory<IHomeController>((i) => HomeController(
             getPeopleListUsecase: i(), getPeopleByNameUsecase: i())),
+        Bind.factory<IFilmDetailsController>((i) => FilmDetailsController()),
         Bind.singleton<IHomeRepository>((i) => HomeRepository(
               iGetStarshipDatasource: i(),
               iGetPeopleListDatasource: i(),

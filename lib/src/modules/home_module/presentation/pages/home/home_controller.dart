@@ -8,6 +8,7 @@ abstract class IHomeController {
   void getPeopleList();
   void getPeopleByName(String name);
   bool get isLoading;
+  bool get listIsEmpty;
   Future init();
 }
 
@@ -20,6 +21,9 @@ class HomeController extends GetxController implements IHomeController {
 
   @override
   bool get isLoading => _isLoading.value;
+
+  @override
+  bool get listIsEmpty => _peopleList.isEmpty;
 
   @override
   List<PeopleEntity> get people => _peopleList.value;

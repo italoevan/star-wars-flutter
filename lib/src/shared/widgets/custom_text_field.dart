@@ -4,6 +4,6 @@ class CustomTextField extends TextField {
   const CustomTextField(
       {super.key,
       super.onChanged,
-      super.decoration = const InputDecoration(),
+      super.decoration = const InputDecoration(border: OutlineInputBorder()),
       super.controller});
 }

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:star_wars/src/consts/app_consts.dart';
 import 'package:star_wars/src/consts/app_routes.dart';
 
 class SplashPage extends StatefulWidget {
@@ -18,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
   }
 
-  void _toHomePage(){
+  void _toHomePage() {
     Modular.to.pushReplacementNamed(AppRoutes.homeModule);
   }
 
@@ -30,7 +31,7 @@ class _SplashPageState extends State<SplashPage> {
         child: Column(
           children: [
             const Text(
-              "   Star\n Wars Api",
+              AppConsts.appName,
               style: TextStyle(
                 fontSize: 60,
                 color: Colors.white,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:loading_animations/loading_animations.dart';
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({super.key});
@@ -7,7 +7,7 @@ class LoadingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: LoadingAnimationWidget.fallingDot(color: Colors.red, size: 30),
+      child: LoadingBouncingGrid.circle(),
     );
   }
 }
